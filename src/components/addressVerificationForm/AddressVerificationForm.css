@@ -1,0 +1,39 @@
+.AddressVerificationForm {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(32,32,32);
+    border-radius: 15px;
+    padding: 30px 30px 30px 30px;
+}
+
+.Form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.InputError {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid red;
+    border-radius: 7px;
+    background-color: rgb(26,26,26);
+    width: 500px;
+    color: white;
+}
+
+.InputError:disabled {
+    border: 2px solid rgb(87,87,87);
+    background-color: rgb(35,35,35);
+    color: black;
+}
+
+.TitleForm {
+    color: white;
+}

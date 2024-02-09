@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {AddressVerificationForm} from "./components/addressVerificationForm/AddressVerificationForm"
+import {AddressAutosuggest} from "./components/autosuggest/AddressAutosuggest"
+import {useAppSelector} from "./store/hooks/redux"
+import {ViewAddressData} from "./components/viewAddressData/ViewAddressData"
+
+import './styles/App.css'
 
 function App() {
+    const step = useAppSelector(state => state.addressReducer.step)
+
+
+    const content = () => {
+        switch (step) {
+            case 0:
+                return <AddressAutosuggest/>
+            case 1:
+                return <AddressVerificationForm/>
+            case 2:
+                return <ViewAddressData/>
+        }
+    }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        {content()}
     </div>
-  );
+  )
 }
 
-export default App;
+export {
+  App
+}

@@ -1,0 +1,46 @@
+.react-autosuggest__input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid rgb(87,87,87);
+    border-radius: 7px;
+    background-color: rgb(26,26,26);
+    width: 500px;
+    color: white;
+}
+
+.react-autosuggest__suggestions-container {
+    background-color: rgb(26,26,26);
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    border-radius: 7px;
+    width: 522px;
+}
+
+.react-autosuggest__suggestions-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.react-autosuggest__suggestion {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.react-autosuggest__suggestion--highlighted {
+    background-color: rgb(78,78,78);
+}
+
+.AddressAutosuggest {
+    background-color: rgb(32,32,32);
+    border-radius: 15px;
+    padding: 30px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.TitleAutosuggest {
+    color: white;
+}
